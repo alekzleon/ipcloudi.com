@@ -10,7 +10,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Google Ads -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=TU_ID" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9068723123011153"
+     crossorigin="anonymous"></script>
 </head>
 <body class="bg-black text-gray-900 overflow-x-hidden">
 
