@@ -10,7 +10,7 @@ Route::get('/', function () {
 });
 
 Route::get('/api/ip', function () {
-    $ip = Http::get("https://api.ipquery.io/");
+    $ip = $_SERVER['REMOTE_ADDR'];
 
 
     return Cache::remember("ip_" . $ip, 300, function () use ($ip) {
