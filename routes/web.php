@@ -25,3 +25,8 @@ Route::view('/ip-lookup', 'pages.ip-lookup');
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/api/myip', function () {
+    $ip = $_SERVER['REMOTE_ADDR'];
+    return $ip;
+});
