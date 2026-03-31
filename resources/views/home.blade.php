@@ -7,7 +7,7 @@
     <meta name="description" content="Consulta tu IP pública, ubicación aproximada, proveedor de internet, zona horaria y estado de seguridad. Herramienta gratuita de Cloudi.">
     <meta name="keywords" content="mi ip, cual es mi ip, ip pública, ip lookup, ubicación ip, vpn, proxy, tor">
 
-  <link href="https://cloudi.mx/assets/logos/4_short.png" rel="icon">
+    <link href="https://cloudi.mx/assets/logos/4_short.png" rel="icon">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Google Ads -->
@@ -62,6 +62,12 @@
                                 </div>
                             </div>
 
+                            <div class="mt-10 text-xs text-gray-400 flex gap-4 justify-center">
+                                <a href="/privacy-policy">Privacidad</a>
+                                <a href="/terms">Términos</a>
+                                <a href="/contact">Contacto</a>
+                            </div>
+
                             <div class="text-xs text-gray-500 flex flex-wrap items-center gap-2">
                                 <span id="header-localtime" class="font-medium">Cargando fecha...</span>
                                 <span class="hidden md:inline">◆</span>
@@ -79,7 +85,7 @@
                                     </p>
 
                                     <h1 class="text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight text-gray-900">
-                                        Descubre tu IP pública y el contexto de tu conexión.
+                                        What is my IP address?
                                     </h1>
 
                                     <p class="mt-3 text-sm md:text-base leading-7 text-gray-600">
@@ -99,6 +105,89 @@
                                         <div class="h-14 bg-gray-200 rounded-2xl"></div>
                                     </div>
                                 </div>
+
+                                <!-- Related articles debajo del IP -->
+                                <section class="mt-5">
+                                    <div class="rounded-[1.5rem] bg-white border border-gray-200 p-4 md:p-5 shadow-sm">
+                                        <div class="mb-4">
+                                            <p class="text-[11px] md:text-xs uppercase tracking-[0.18em] text-[#FF2669] font-semibold mb-2">
+                                                Artículos relacionados
+                                            </p>
+                                            <h2 class="text-lg md:text-xl font-black text-gray-900">
+                                                Aprende más sobre IP y búsquedas de red
+                                            </h2>
+                                            <p class="text-sm text-gray-600 mt-2">
+                                                Si quieres entender mejor qué significa tu IP y cómo analizarla, aquí tienes dos guías rápidas.
+                                            </p>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <a
+                                                href="{{ url('/what-is-my-ip') }}"
+                                                class="group rounded-2xl border border-gray-200 bg-gray-50 p-4 hover:bg-white hover:shadow-lg transition-all duration-300"
+                                            >
+                                                <div class="flex items-start justify-between gap-3 mb-3">
+                                                    <div class="w-11 h-11 rounded-2xl bg-[#FF2669]/10 flex items-center justify-center shrink-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#FF2669]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M7 5h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2z" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <span class="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold bg-white border border-gray-200 text-gray-600">
+                                                        Básico
+                                                    </span>
+                                                </div>
+
+                                                <h3 class="text-base md:text-lg font-bold text-gray-900 group-hover:text-[#FF2669] transition-colors">
+                                                    What is my IP
+                                                </h3>
+
+                                                <p class="mt-2 text-sm text-gray-600 leading-6">
+                                                    Entiende qué es una dirección IP, por qué es importante y qué información puede revelar sobre tu conexión.
+                                                </p>
+
+                                                <div class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#FF2669]">
+                                                    Leer artículo
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+
+                                            <a
+                                                href="{{ url('/ip-lookup') }}"
+                                                class="group rounded-2xl border border-gray-200 bg-gray-50 p-4 hover:bg-white hover:shadow-lg transition-all duration-300"
+                                            >
+                                                <div class="flex items-start justify-between gap-3 mb-3">
+                                                    <div class="w-11 h-11 rounded-2xl bg-sky-100 flex items-center justify-center shrink-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15z" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <span class="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold bg-white border border-gray-200 text-gray-600">
+                                                        Lookup
+                                                    </span>
+                                                </div>
+
+                                                <h3 class="text-base md:text-lg font-bold text-gray-900 group-hover:text-sky-600 transition-colors">
+                                                    IP Lookup
+                                                </h3>
+
+                                                <p class="mt-2 text-sm text-gray-600 leading-6">
+                                                    Aprende cómo funciona una búsqueda de IP y qué tipo de datos puedes obtener como ubicación, ISP y nivel de riesgo.
+                                                </p>
+
+                                                <div class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-sky-600">
+                                                    Leer artículo
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
 
                             <!-- Right -->

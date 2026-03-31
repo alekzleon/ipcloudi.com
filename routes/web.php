@@ -5,10 +5,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/api/ip', function () {
     $ip = $_SERVER['REMOTE_ADDR'];
 
@@ -18,6 +14,13 @@ Route::get('/api/ip', function () {
         return $response->json();
     });
 });
+
+Route::view('/privacy-policy', 'pages.privacy');
+Route::view('/terms', 'pages.terms');
+Route::view('/contact', 'pages.contact');
+
+Route::view('/what-is-my-ip', 'pages.what-is-my-ip');
+Route::view('/ip-lookup', 'pages.ip-lookup');
 
 Route::get('/', function () {
     return view('home');
