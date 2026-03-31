@@ -82,3 +82,38 @@ Route::get('/api/myip', function (Request $request) {
         'laravel_ips' => $request->ips(),
     ]);
 });
+
+
+Route::get('/api/myipV2', function (Request $request) {
+    $ips = collect([
+        $_SERVER['HTTP_CF_CONNECTING_IP'] ?? null,
+        ...$request->ips(),
+        $request->ip(),
+        $_SERVER['REMOTE_ADDR'] ?? null,
+    ])->filter()->unique()->values();
+
+    return response()->json([
+        'ipv4' => $ips->first(fn ($ip) => filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)),
+        'ipv6' => $ips->first(fn ($ip) => filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)),
+        'all_ips' => $ips,
+    ]);
+});
+
+Route::get('/api/myipV3', function (Request $request) {
+    $ips = collect([
+        $_SERVER['HTTP_CF_CONNECTING_IP'] ?? null,
+        ...$request->ips(),
+        $request->ip(),
+        $_SERVER['REMOTE_ADDR'] ?? null,
+    ])->filter()->unique()->values();
+
+    $ipv4 = $ips->first(fn ($ip) => filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4));
+    $ipv6 = $ips->first(fn ($ip) => filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6));
+
+    return response()->json([
+        'ip_preferred' => $ipv4 ?: $ipv6,
+        'ipv4' => $ipv4,
+        'ipv6' => $ipv6,
+        'all_ips' => $ips,
+    ]);
+});
