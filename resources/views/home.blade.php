@@ -36,12 +36,19 @@
 
     <!-- Top Ad -->
     <section class="w-full px-3 pt-3">
-        <div class="mx-auto max-w-[1700px]">
-            <div class="h-20 rounded-2xl border border-white/10 bg-white/5 text-white/40 flex items-center justify-center text-sm">
-                Google Ads Top
-            </div>
+    <div<section class="w-full px-3 pt-3">
+    <div class="mx-auto max-w-[1700px]">
+        <div class="h-[150px] rounded-2xl overflow-hidden border border-white/10">
+            <a href="#" target="_blank">
+                <img 
+                    src="{{ asset('asset/publicidad_top.jpg') }}" 
+                    alt="Publicidad"
+                    class="w-full h-full object-cover hover:scale-[1.02] transition"
+                >
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
     <main class="px-3 py-3">
         <div class="mx-auto max-w-[1700px] grid grid-cols-1 xl:grid-cols-[180px_minmax(0,1fr)_180px] gap-4 items-start">
@@ -49,8 +56,17 @@
             <!-- Left Ad -->
             <aside class="hidden xl:block" aria-label="Left advertising area">
                 <div class="sticky top-3">
-                    <div class="h-[720px] rounded-3xl border border-white/10 bg-white/5 text-white/40 flex items-center justify-center text-sm">
-                        Tu marca aquí
+                    <div class="h-[720px] rounded-3xl overflow-hidden border border-white/10">
+                        <img 
+                            src="{{ asset('asset/publicidad_left.png') }}" 
+                            alt="Publicidad"
+                            class="w-full h-full object-contain bg-black"
+                        >
+                        <img 
+                            src="{{ asset('asset/publicidad_left.png') }}" 
+                            alt="Publicidad"
+                            class="w-full h-full object-cover"
+                        >
                     </div>
                 </div>
             </aside>
