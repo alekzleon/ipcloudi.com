@@ -7,6 +7,7 @@
     <meta name="description" content="Consulta tu IP pública, ubicación aproximada, proveedor de internet, zona horaria y estado de seguridad. Herramienta gratuita de Cloudi.">
     <meta name="keywords" content="mi ip, cual es mi ip, ip pública, ip lookup, ubicación ip, vpn, proxy, tor">
 
+  <link href="https://cloudi.mx/assets/logos/4_short.png" rel="icon">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Google Ads -->
