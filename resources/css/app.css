@@ -2,3 +2,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .article-content { @apply text-base leading-8 text-gray-700; overflow-wrap: anywhere; }
+    .article-content h2 { @apply text-2xl font-bold text-gray-900 mt-10 mb-4 leading-snug; }
+    .article-content h3 { @apply text-lg font-bold text-gray-900 mt-6 mb-3; }
+    .article-content p { @apply my-4; }
+    .article-content a { @apply text-pink-700 underline underline-offset-4 hover:text-pink-900; }
+    .article-content ul { @apply list-disc pl-6 my-4; }
+    .article-content ol { @apply list-decimal pl-6 my-4; }
+    .article-content li { @apply my-2; }
+    .article-content .table-scroll { @apply overflow-x-auto my-6; }
+    .article-content table { @apply w-full text-sm text-left border-collapse; }
+    .article-content th, .article-content td { @apply border border-gray-200 p-3 align-top; min-width: 110px; }
+    .article-content th { @apply bg-gray-50 font-semibold text-gray-900; }
+    .article-content code { @apply rounded bg-gray-100 px-1 text-sm; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #db2777; outline-offset: 4px; }
+}
+
+@layer components {
+    .info-content { color: #d1d5db; font-size: 1.0625rem; line-height: 1.9; overflow-wrap: anywhere; }
+    .info-content > p { margin: 0 0 1.5rem; }
+    .info-content > h2 { color: #fafafa; font-size: 1.5rem; font-weight: 700; line-height: 1.35; letter-spacing: -0.025em; margin: 3rem 0 1.25rem; }
+    .info-content > h3 { color: #fafafa; font-size: 1.125rem; font-weight: 600; margin: 2rem 0 1rem; }
+    .info-content a { color: #ff6998; text-decoration: underline; text-underline-offset: 4px; }
+    .info-content a:hover { color: #ffa6c1; }
+    @media (min-width: 768px) {
+        .info-content { font-size: 1.125rem; line-height: 1.95; }
+    }
+}

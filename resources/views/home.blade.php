@@ -1,26 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Cuál es mi IP pública? | IPCloudi</title>
-    <meta name="description" content="Consulta tu IP pública, ubicación aproximada, proveedor de internet y señales orientativas de VPN, proxy y TOR.">
-    <meta name="keywords" content="mi IP, dirección IP pública, consulta IP, ubicación aproximada, redes">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ipcloudi.com/">
-    <link rel="icon" type="image/png" href="{{ asset('asset/icon_cloudi.png') }}">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="¿Cuál es mi IP pública? | IPCloudi">
-    <meta property="og:description" content="Consulta tu IP pública y datos aproximados de ubicación, proveedor y red.">
-    <meta property="og:url" content="https://ipcloudi.com/">
-    <meta property="og:site_name" content="IPCloudi">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="¿Cuál es mi IP pública? | IPCloudi">
-    <meta name="twitter:description" content="Consulta tu IP pública y datos aproximados de ubicación, proveedor y red.">
+    @include('partials.meta', ['title' => '¿Cuál es mi IP pública?'])
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -68,15 +49,11 @@
 
                                 <div>
                                     <p class="font-semibold text-gray-900 text-base">IPCloudi</p>
-                                    <p class="text-xs text-gray-500">Consulta de IP pública e información de red</p>
+                                    <p class="text-xs text-gray-500">{{ config('site.description') }}</p>
                                 </div>
                             </div>
 
-                            <nav class="text-xs text-gray-500 flex flex-wrap items-center gap-4 justify-center" aria-label="Información del sitio">
-                                <a href="/privacy-policy" class="hover:text-[#FF2669] transition-colors">Privacidad</a>
-                                <a href="/terms" class="hover:text-[#FF2669] transition-colors">Términos</a>
-                                <a href="/contact" class="hover:text-[#FF2669] transition-colors">Contacto</a>
-                            </nav>
+                            @include('partials.navigation')
 
                             <div class="text-xs text-gray-500 flex flex-wrap items-center gap-2">
                                 <span id="header-localtime" class="font-medium">Consultando hora local…</span>
@@ -128,7 +105,7 @@
                                                 Aprende sobre direcciones IP y consultas de red
                                             </h2>
                                             <p class="text-sm text-gray-600 mt-2">
-                                                Conoce mejor tu conexión con estas guías.
+                                                Conoce mejor tu conexión con estas guías. <a href="/guias" class="font-semibold text-pink-600 underline">Ver todas las guías</a>
                                             </p>
                                         </div>
 
@@ -242,18 +219,7 @@
                         </section>
 
 
-                        <!-- Bottom legal footer inside card -->
-                        <footer class="mt-8 pt-5 border-t border-gray-200">
-                            <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-                                <p>© {{ date('Y') }} IPCloudi. Free IP checker tool.</p>
 
-                                <nav class="flex flex-wrap items-center justify-center gap-4" aria-label="Información del sitio">
-                                    <a href="/privacy-policy" class="hover:text-[#FF2669] transition-colors">Privacidad</a>
-                                    <a href="/terms" class="hover:text-[#FF2669] transition-colors">Términos</a>
-                                    <a href="/contact" class="hover:text-[#FF2669] transition-colors">Contacto</a>
-                                </nav>
-                            </div>
-                        </footer>
                     </div>
                 </div>
             </section>

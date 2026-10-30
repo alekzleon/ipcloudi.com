@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IP Lookup: qué es, cómo funciona y qué información muestra | Cloudi</title>
-    <meta name="description" content="Aprende qué es un IP Lookup, cómo funciona y qué datos puede mostrar una consulta IP como ubicación aproximada, proveedor, ASN, VPN, proxy y riesgo.">
-    <meta name="keywords" content="ip lookup, consulta ip, buscar ip, ip pública, ubicación ip, vpn proxy tor">
-
-    <link rel="icon" type="image/png" href="{{ asset('asset/icon_cloudi.png') }}">
+    @include('partials.meta')
     @vite(['resources/css/app.css'])
-    <link rel="canonical" href="https://ipcloudi.com/ip-lookup">
     @include('partials.adsense')
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
 
     <main class="px-4 py-4 md:px-6 md:py-6">
+        <div class="max-w-6xl mx-auto mb-5">@include('partials.navigation', ['dark' => true])</div>
         <div class="mx-auto max-w-6xl">
 
             <!-- Hero -->
@@ -33,13 +27,13 @@
                         </a>
 
                         <span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-sky-100 text-sky-700 border border-sky-200">
-                            Lookup guide
+                            Guía de consulta IP
                         </span>
                     </div>
 
                     <div class="max-w-4xl">
                         <p class="text-[11px] md:text-xs uppercase tracking-[0.2em] text-sky-600 font-semibold mb-3">
-                            Cloudi IP Tool
+                            IPCloudi
                         </p>
 
                         <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight text-gray-900">
@@ -211,7 +205,9 @@
                             </p>
                         </div>
                     </div>
-                <p class="mt-6 text-sm text-gray-500">Revisión técnica: 29 de octubre de 2026. Ubicaciones y señales de red son aproximadas; no identifican un domicilio ni garantizan seguridad.</p>
+                <p class="mt-6 text-sm text-gray-500">Por IPCloudi · Revisión editorial: 29 de octubre de 2026. Ubicaciones y señales de red son aproximadas; no identifican un domicilio ni garantizan seguridad.</p>
+                @include('partials.related-articles')
+                @include('partials.service-promo')
                 </article>
 
                 <!-- Sidebar -->
@@ -241,12 +237,7 @@
                         </a>
                     </div>
 
-                    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 text-white/70">
-                        <p class="text-sm font-semibold mb-2">Promoción externa · Ecommerce en 24 horas</p>
-                        <p class="text-xs leading-6">
-                            <a href="https://tienda.paginas.art">Tu ecommerce, click aquí</a>
-                        </p>
-                    </div>
+
                 </aside>
             </section>
         </div>
