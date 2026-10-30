@@ -31,3 +31,15 @@
         .info-content { font-size: 1.125rem; line-height: 1.95; }
     }
 }
+
+@layer components {
+    .guide-content { @apply text-gray-600; }
+    .guide-content > p:first-child { @apply mt-0 text-lg leading-8; }
+    .guide-content h2 { @apply font-black; }
+    .guide-content .guide-faq { @apply mt-4 rounded-3xl border border-gray-200 p-5; }
+    .guide-content .guide-faq h3 { @apply mt-0 mb-0 text-base font-bold; }
+    .guide-content .guide-faq p { @apply mt-2 mb-0 text-sm leading-7; }
+    @media (min-width: 768px) {
+        .guide-content h2 { @apply text-3xl; }
+    }
+}

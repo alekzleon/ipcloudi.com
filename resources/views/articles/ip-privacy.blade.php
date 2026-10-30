@@ -1,6 +1,9 @@
 @extends('layouts.article')
-@section('content')
+@section('intro')
 <p>Con tu dirección IP, una consulta pública puede mostrar datos sobre la red desde la que te conectas: proveedor, país y una ubicación aproximada, entre otros campos. Normalmente no muestra tu nombre, tu contraseña ni tu domicilio exacto. Sin embargo, la IP puede combinarse con registros y otros identificadores, por lo que tampoco conviene tratarla como información sin importancia.</p>
+@endsection
+@section('content')
+
 <p>La clave es distinguir lo que revela una búsqueda pública de lo que podría conocer un servicio que además tiene tu cuenta, tus mensajes o tus permisos de ubicación. Esta guía explica esos límites y ofrece medidas de privacidad sin prometer anonimato completo.</p>
 
 <h2>¿Qué información revela realmente una dirección IP?</h2>
@@ -65,11 +68,11 @@
 <p>Para entender cambios entre comprobaciones, consulta <a href="/por-que-cambia-mi-ip">por qué cambia una IP y cómo interviene CGNAT</a>. También puedes revisar <a href="/ip-publica-vs-ip-privada">qué diferencia hay entre la IP pública y la privada</a> para no confundir datos del router con datos visibles desde Internet.</p>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Mi IP revela mi nombre?</h3><p>Una búsqueda pública normalmente no muestra el nombre del abonado. Un servicio con información adicional puede establecer asociaciones que una consulta abierta no ofrece.</p>
-<h3>¿Otra persona puede tener mi misma IP pública?</h3><p>Sí. Puede compartir tu router o una salida del proveedor mediante CGNAT, sin tener acceso a tu red local.</p>
-<h3>¿Usar Wi-Fi público me vuelve anónimo?</h3><p>No. El servicio de destino puede seguir reconociendo cuentas o cookies. Además, debes valorar la confianza en la red utilizada.</p>
-<h3>¿Una VPN impide cualquier rastreo?</h3><p>No. Cambiar la dirección visible no elimina otros identificadores ni los datos que proporcionas al usar servicios.</p>
-<h3>¿Una ciudad incorrecta indica que alguien usa mi conexión?</h3><p>No necesariamente. Puede reflejar la salida de red, un intermediario o datos de geolocalización imprecisos.</p>
+<div class="guide-faq"><h3>¿Mi IP revela mi nombre?</h3><p>Una búsqueda pública normalmente no muestra el nombre del abonado. Un servicio con información adicional puede establecer asociaciones que una consulta abierta no ofrece.</p></div>
+<div class="guide-faq"><h3>¿Otra persona puede tener mi misma IP pública?</h3><p>Sí. Puede compartir tu router o una salida del proveedor mediante CGNAT, sin tener acceso a tu red local.</p></div>
+<div class="guide-faq"><h3>¿Usar Wi-Fi público me vuelve anónimo?</h3><p>No. El servicio de destino puede seguir reconociendo cuentas o cookies. Además, debes valorar la confianza en la red utilizada.</p></div>
+<div class="guide-faq"><h3>¿Una VPN impide cualquier rastreo?</h3><p>No. Cambiar la dirección visible no elimina otros identificadores ni los datos que proporcionas al usar servicios.</p></div>
+<div class="guide-faq"><h3>¿Una ciudad incorrecta indica que alguien usa mi conexión?</h3><p>No necesariamente. Puede reflejar la salida de red, un intermediario o datos de geolocalización imprecisos.</p></div>
 
 <h2>Conclusión</h2>
 <p>La IP aporta información de red, pero no equivale por sí sola a una identidad personal completa. Interpreta sus datos junto con su contexto y protege también tus cuentas, permisos y dispositivos. Puedes <a href="/">consultar tu IP en IPCloudi</a> para conocer la salida visible de tu conexión, recordando que ubicación y detecciones son aproximaciones.</p>

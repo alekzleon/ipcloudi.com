@@ -1,6 +1,9 @@
 @extends('layouts.article')
-@section('content')
+@section('intro')
 <p>La diferencia entre una IP pública y privada está en dónde se utiliza: la pública identifica una conexión accesible mediante el direccionamiento de Internet; la privada organiza dispositivos dentro de una red local. En casa puedes tener una IP privada distinta para tu celular y tu computadora, aunque ambos salgan a Internet con la misma IP pública. Ninguna de las dos direcciones equivale, por sí sola, a tu identidad personal.</p>
+@endsection
+@section('content')
+
 <p>Entender esta diferencia ayuda cuando configuras una impresora, reportas un problema de conexión o comparas lo que aparece en tu equipo con una herramienta en línea. Antes de cambiar ajustes, identifica qué dirección estás viendo y en qué red tiene sentido.</p>
 
 <h2>¿Qué es una dirección IP?</h2>
@@ -66,11 +69,11 @@
 <p>Esto no significa que puedas publicar un servidor con solo compartir su dirección privada. La accesibilidad también depende de firewall, configuración del router y posibles traducciones del proveedor. No abras puertos sin entender qué servicio expones.</p>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Una IP privada es más segura?</h3><p>No garantiza seguridad. Reduce la exposición directa habitual, pero siguen importando las actualizaciones, contraseñas, permisos y reglas de acceso.</p>
-<h3>¿Por qué todos mis dispositivos muestran la misma IP pública?</h3><p>Normalmente comparten la salida del router. También puede existir una salida compartida por el proveedor.</p>
-<h3>¿Una IP fija siempre es pública?</h3><p>No. «Fija» describe estabilidad y «pública» describe alcance. Una dirección local puede configurarse para permanecer estable.</p>
-<h3>¿La dirección del router es mi IP pública?</h3><p>El router suele tener una dirección local de administración y otra en su conexión WAN. Son interfaces y funciones distintas.</p>
-<h3>¿Mi IP permite conocer mi domicilio?</h3><p>Una consulta pública normalmente ofrece una zona estimada. Revisa <a href="/que-pueden-saber-con-mi-ip">qué información puede revelar una IP</a> para conocer sus límites.</p>
+<div class="guide-faq"><h3>¿Una IP privada es más segura?</h3><p>No garantiza seguridad. Reduce la exposición directa habitual, pero siguen importando las actualizaciones, contraseñas, permisos y reglas de acceso.</p></div>
+<div class="guide-faq"><h3>¿Por qué todos mis dispositivos muestran la misma IP pública?</h3><p>Normalmente comparten la salida del router. También puede existir una salida compartida por el proveedor.</p></div>
+<div class="guide-faq"><h3>¿Una IP fija siempre es pública?</h3><p>No. «Fija» describe estabilidad y «pública» describe alcance. Una dirección local puede configurarse para permanecer estable.</p></div>
+<div class="guide-faq"><h3>¿La dirección del router es mi IP pública?</h3><p>El router suele tener una dirección local de administración y otra en su conexión WAN. Son interfaces y funciones distintas.</p></div>
+<div class="guide-faq"><h3>¿Mi IP permite conocer mi domicilio?</h3><p>Una consulta pública normalmente ofrece una zona estimada. Revisa <a href="/que-pueden-saber-con-mi-ip">qué información puede revelar una IP</a> para conocer sus límites.</p></div>
 
 <h2>Conclusión</h2>
 <p>Consulta la IP del dispositivo para resolver asuntos locales y la IP visible en Internet para revisar la salida de tu conexión. Identificar ambas evita confusiones al pedir soporte. Puedes empezar por <a href="/">consultar tu IP pública en IPCloudi</a> y compararla con los detalles de la red activa, sin cambiar ninguna configuración.</p>

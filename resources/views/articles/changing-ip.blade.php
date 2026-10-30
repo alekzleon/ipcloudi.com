@@ -1,6 +1,9 @@
 @extends('layouts.article')
-@section('content')
+@section('intro')
 <p>Tu dirección IP puede cambiar porque el proveedor utiliza asignaciones dinámicas, porque te conectas a otra red o porque cambia el punto de salida de una VPN. Es un comportamiento habitual y no significa, por sí solo, que alguien haya entrado a tu conexión. Lo primero es distinguir si cambió la dirección local de tu dispositivo o la IP que observan los servicios de Internet.</p>
+@endsection
+@section('content')
+
 <p>Tampoco existe una frecuencia universal de cambio. Algunas conexiones conservan su dirección durante periodos prolongados; otras cambian al reconectarse o pasar de una red a otra. Aquí encontrarás una forma de interpretar esos cambios y reconocer señales que podrían relacionarse con CGNAT.</p>
 
 <h2>¿Es normal que mi dirección IP cambie?</h2>
@@ -66,12 +69,12 @@
 <p>Para un servidor, el cambio puede volver incorrecta la dirección publicada. Conviene preparar un método de acceso compatible con el servicio contratado y comprobar las reglas de seguridad. Para navegación cotidiana, un cambio aislado no implica que necesites una IP fija.</p>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Reiniciar el módem siempre cambia mi IP?</h3><p>No. El proveedor puede volver a asignar la misma. Reiniciarlo tampoco garantiza salir de CGNAT.</p>
-<h3>¿Cambiar de Wi-Fi cambia mi IP?</h3><p>Puede cambiar la dirección local y la salida pública. Dos puntos de acceso de una misma red pueden compartir esa salida.</p>
-<h3>¿Una VPN cambia todas las direcciones del equipo?</h3><p>No necesariamente. Modifica el recorrido del tráfico que pasa por ella; la IP local puede permanecer igual y algunas aplicaciones pueden usar otra ruta.</p>
-<h3>¿Necesito una IP fija para trabajar desde casa?</h3><p>No siempre. Depende de los requisitos de acceso de tu organización, no de trabajar remotamente en sí mismo.</p>
-<h3>¿CGNAT significa que alguien comparte mi Wi-Fi?</h3><p>No. Compartir una salida pública del proveedor no equivale a estar dentro de tu red doméstica.</p>
-<h3>¿Un cambio de IP significa que me hackearon?</h3><p>No por sí solo. Si hay otros indicios, revisa dispositivos y cuentas. Consulta <a href="/que-pueden-saber-con-mi-ip">los límites de la información asociada a una IP</a>.</p>
+<div class="guide-faq"><h3>¿Reiniciar el módem siempre cambia mi IP?</h3><p>No. El proveedor puede volver a asignar la misma. Reiniciarlo tampoco garantiza salir de CGNAT.</p></div>
+<div class="guide-faq"><h3>¿Cambiar de Wi-Fi cambia mi IP?</h3><p>Puede cambiar la dirección local y la salida pública. Dos puntos de acceso de una misma red pueden compartir esa salida.</p></div>
+<div class="guide-faq"><h3>¿Una VPN cambia todas las direcciones del equipo?</h3><p>No necesariamente. Modifica el recorrido del tráfico que pasa por ella; la IP local puede permanecer igual y algunas aplicaciones pueden usar otra ruta.</p></div>
+<div class="guide-faq"><h3>¿Necesito una IP fija para trabajar desde casa?</h3><p>No siempre. Depende de los requisitos de acceso de tu organización, no de trabajar remotamente en sí mismo.</p></div>
+<div class="guide-faq"><h3>¿CGNAT significa que alguien comparte mi Wi-Fi?</h3><p>No. Compartir una salida pública del proveedor no equivale a estar dentro de tu red doméstica.</p></div>
+<div class="guide-faq"><h3>¿Un cambio de IP significa que me hackearon?</h3><p>No por sí solo. Si hay otros indicios, revisa dispositivos y cuentas. Consulta <a href="/que-pueden-saber-con-mi-ip">los límites de la información asociada a una IP</a>.</p></div>
 
 <h2>Conclusión</h2>
 <p>Interpreta los cambios comparando la misma red, la misma familia de direcciones y el mismo uso de VPN. Después, confirma con tu proveedor cualquier condición que necesites para acceso remoto. Puedes <a href="/">consultar tu IP visible en IPCloudi</a> y usar la <a href="/ip-lookup">guía de consultas IP</a> para entender el resultado, sin atribuir a un cambio más significado del que tiene.</p>
