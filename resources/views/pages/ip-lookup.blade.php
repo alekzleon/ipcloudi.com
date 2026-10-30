@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,10 @@
     <meta name="description" content="Aprende qué es un IP Lookup, cómo funciona y qué datos puede mostrar una consulta IP como ubicación aproximada, proveedor, ASN, VPN, proxy y riesgo.">
     <meta name="keywords" content="ip lookup, consulta ip, buscar ip, ip pública, ubicación ip, vpn proxy tor">
 
-    <link href="https://cloudi.mx/assets/logos/4_short.png" rel="icon">
+    <link rel="icon" type="image/png" href="{{ asset('asset/icon_cloudi.png') }}">
     @vite(['resources/css/app.css'])
+    <link rel="canonical" href="https://ipcloudi.com/ip-lookup">
+    @include('partials.adsense')
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
@@ -209,6 +211,7 @@
                             </p>
                         </div>
                     </div>
+                <p class="mt-6 text-sm text-gray-500">Revisión técnica: 29 de octubre de 2026. Ubicaciones y señales de red son aproximadas; no identifican un domicilio ni garantizan seguridad.</p>
                 </article>
 
                 <!-- Sidebar -->
@@ -239,7 +242,7 @@
                     </div>
 
                     <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 text-white/70">
-                        <p class="text-sm font-semibold mb-2">TU ECOMMERCE EN 24 HORAS</p>
+                        <p class="text-sm font-semibold mb-2">Promoción externa · Ecommerce en 24 horas</p>
                         <p class="text-xs leading-6">
                             <a href="https://tienda.paginas.art">Tu ecommerce, click aquí</a>
                         </p>
@@ -248,5 +251,6 @@
             </section>
         </div>
     </main>
+@include('partials.footer')
 </body>
 </html>
